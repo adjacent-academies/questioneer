@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@4.1.2/dist/handlebars.min.js" integrity="sha256-ngJY93C4H39YbmrWhnLzSyiepRuQDVKDNCWO2iyMzFw=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.19.0/dist/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="/javascripts/index.js"></script>
+</head>
+
+<body>
+  <div class="ui fixed menu">
+    <div class="ui container">
+      <a href="#" class="item">
+        <img class="logo" src="/images/logo.png">
+        <span>adjacent questioneer</span>
+      </a>
+      <a href="/" class="item">home</a>
+      <a href="/agenda" class="item">agenda</a>
+    </div>
+  </div>
+  <div class="ui hidden divider"></div>
+  {{{body}}}
+</body>
+
+</html>

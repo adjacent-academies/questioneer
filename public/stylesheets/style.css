@@ -1,0 +1,44 @@
+* {
+  /* border: 1px red solid; */
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input {
+  size: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+a span {
+  /* border: 1px solid red; */
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+input[type=text] {
+  font-size: 20px;
+  width: 400px;
+}
+
+.hide {
+  display: none;
+}
+
+.ui.divider {
+  padding: 1em;
+}
+
+.big.check:hover {
+  color: blue;
+}

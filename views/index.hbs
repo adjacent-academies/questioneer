@@ -1,0 +1,40 @@
+<div class="ui container">
+  <h1 class="ui header">{{title}}</h1>
+  <div class="ui hidden divider" id="divider"></div>
+  <div class="ask">
+    <form action="#" method="post">
+      <div class="ui fluid action input">
+        <input type="text" name="question" placeholder="ask anything you like">
+        <button class="ui button blue">submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="ui divider"></div>
+  <div class="ui question cards">
+    {{#each questions}}
+    <div class="ui fluid raised card" data-card-id="{{id}}">
+      <div class="content">
+        <i class="ui right floated circular link green icon thumbs up outline"></i>
+        <div class="ui right floated label">{{points}}</div>
+        <i class="ui right floated circular link red icon thumbs down outline"></i>
+        <div class="header">{{text}}</div>
+        <div class="meta">asked on {{formatDate timestamp}}</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<script id="question-template" type="text/x-handlebars-template">
+  <div class="ui fluid raised card" data-card-id="\{{id}}">
+    <div class="content">
+      <i class="right floated circular link green icon thumbs up outline"></i>
+      <div class="ui right floated label">\{{points}}</div>
+      <i class="right floated circular link red icon thumbs down outline"></i>
+      <div class="header">\{{text}}</div>
+      <div class="meta">asked on \{{formatDate timestamp}}</div>
+    </div>
+  </div>
+</script>
+
