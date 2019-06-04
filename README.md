@@ -2,7 +2,7 @@
 
 ## Setup
 
-- clone this repo
+- clone this repo into a folder
 - cd into the repo folder and run `npm i`
 - run `npm run dev` and open `http://localhost:3000`
 

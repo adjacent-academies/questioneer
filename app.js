@@ -1,6 +1,7 @@
 const createError = require("http-errors");
 const express = require("express");
 const exphbs = require("express-handlebars");
+const helpers = require('./views/helpers')
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
@@ -11,21 +12,7 @@ const agendaRouter = require("./routes/agenda");
 const app = express();
 
 // view engine setup
-var hbs = exphbs.create({
-  // Specify helpers which are only registered on this instance.
-  helpers: {
-    formatDate: function(date) {
-      const options = {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      };
-      return new Date(date).toLocaleDateString("en-US", options);
-    }
-  }
-});
-
+var hbs = exphbs.create({ helpers });
 app.set("views", path.join(__dirname, "views"));
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
